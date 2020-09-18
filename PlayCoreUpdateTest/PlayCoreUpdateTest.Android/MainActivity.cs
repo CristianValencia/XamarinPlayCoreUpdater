@@ -1,9 +1,6 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Com.Google.Android.Play.Core.Appupdate;
@@ -12,6 +9,8 @@ using Android.Util;
 using Com.Google.Android.Play.Core.Install.Model;
 using Com.Google.Android.Play.Core.Tasks;
 using Com.Google.Android.Play.Core.Appupdate.Testing;
+using Com.Google.Android.Play.Core.Review;
+using Com.Google.Android.Play.Core.Review.Testing;
 
 namespace PlayCoreUpdateTest.Droid
 {
@@ -20,6 +19,9 @@ namespace PlayCoreUpdateTest.Droid
     {
         private const int _Request_Update = 4711;
         private const int APP_UPDATE_TYPE_SUPPORTED = AppUpdateType.Immediate;
+
+        //private readonly IReviewManager _reviewManager;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
@@ -32,12 +34,16 @@ namespace PlayCoreUpdateTest.Droid
             LoadApplication(new App());
 
 #if DEBUG
+            //var manager = ReviewManagerFactory.Create(this);
+            //var request = _reviewManager
+
             var appUpdateManager = new FakeAppUpdateManager(this);
             /* The below line of code will trigger the fake app update manager which it will display the alert dialog 
             Let say if we comment this line of code to simulate update is not available then the play core update not available flag
             will be captured on the appupdatesuccess listener.
             If comment this line it will simulate if the app update is not available. Then you can add logic when update is not available using immeidate update*/
             appUpdateManager.SetUpdateAvailable(2); // your higher app version code that can be used to test fakeappupdate manager
+            //Com.Google.Android.Play.Core.Review
 #else       // The below line of code will execute in release configuration
             IAppUpdateManager appUpdateManager = AppUpdateManagerFactory.Create(this);
 #endif

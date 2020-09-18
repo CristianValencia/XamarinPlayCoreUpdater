@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package >
   <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
+    <id>PlayCoreServices</id>
+    <version>1.0.0</version>
     <title>$title$</title>
     <authors>PatGet, gabrieldwight</authors>
     <owners>$author$</owners>

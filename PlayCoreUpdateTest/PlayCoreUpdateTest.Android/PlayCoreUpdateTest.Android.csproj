@@ -16,13 +16,13 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <ReleaseVersion>1.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -89,13 +89,13 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\PlayCore\PlayCore.csproj">
-      <Project>{54497fe6-31f4-4051-846b-7adfe4399c33}</Project>
-      <Name>PlayCore</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PlayCoreUpdateTest\PlayCoreUpdateTest.csproj">
-      <Project>{C645A9F0-2268-4164-9A15-429B63CF2A52}</Project>
+      <Project>{EC032212-8098-4BC1-ACAC-2425B0B67313}</Project>
       <Name>PlayCoreUpdateTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PlayCore\PlayCore.csproj">
+      <Project>{54497FE6-31F4-4051-846B-7ADFE4399C33}</Project>
+      <Name>PlayCore</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

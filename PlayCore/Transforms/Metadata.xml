@@ -14,7 +14,7 @@
     <attr path="/api/package[@name='com.google.android.play.core.splitinstall']/class[@name='SplitInstallException']" name="extends">Java.Lang.Object</attr>
     <attr path="/api/package[@name='com.google.android.play.core.install']/class[@name='InstallException']" name="extends">Java.Lang.Object</attr>
     <attr path="/api/package[@name='com.google.android.play.core.tasks']/class[@name='RuntimeExecutionException']" name="extends">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.play.core.listener']/interface[@name='StateUpdatedListener']/method[@name='onStateUpdate' and count(parameter)=1 and parameter[1][@type='StateT']]/parameter[1]" name="type">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.play.core.listener']/interface[@name='StateUpdatedListener']/method[@name='onStateUpdate' and  count(parameter)=1 and parameter[1][@type='StateT']]/parameter[1]" name="type">Java.Lang.Object</attr>
     <add-node path="/api">
         <package name="com.google.android.play.core.review" />
     </add-node>
@@ -22,8 +22,9 @@
         <package name="com.google.android.play.core.review.ReviewManager" />
     </add-node>
     <add-node path="/api/package[@name='com.google.android.play.core.review']">
-        <class abstract="false" deprecated="not deprecated" final="false" name="ReviewManagerFactory" static="false" visibility="public" extends="java.lang.Object" />
-        <constructor deprecated="not deprecated" final="false" name="ReviewManagerFactory" static="true" visibility="public" />
+        <class abstract="false" deprecated="not deprecated" final="false" name="ReviewManagerFactory" static="false" visibility="public"/>
+        <method deprecated="not deprecated" final="false" name="create" static="true" visibility="public" />
+        <constructor deprecated="not deprecated" final="false" name="ReviewManagerFactory" static="false" visibility="private" />
     </add-node>
     <attr path="/api/package[@name='com.google.android.play.core.review.testing']" name="visibility">public</attr>
 </metadata>

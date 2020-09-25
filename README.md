@@ -1,6 +1,7 @@
 [![NuGet](https://img.shields.io/badge/Nuget-1.0.0-blue.svg)](https://www.nuget.org/packages/PlayCore/)
 # XamarinPlayCoreUpdater
 This repo conatins a NuGet package that allows you to Support in-app updates in your Xamarin Forms Android Apps.
+This repo has been forked to support the in-app rate flow in your Xamarin Forms Android app.
 Supported and tested is the Immediate update variant.
 
 See https://developer.android.com/guide/playcore/in-app-updates for more info.
